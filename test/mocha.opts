@@ -1,6 +1,0 @@
---reporter spec
---recursive
---check-leaks
---reporter spec
---ui bdd
---timeout 10000
