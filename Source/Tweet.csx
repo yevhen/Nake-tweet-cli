@@ -47,7 +47,17 @@ using Spring.Social.Twitter.Api.Impl;
 }
 
 /// <summary> 
-/// Posts new tweet using given text
+/// Posts new message to twitter but reads it from stdin, enabling use with scripting
+/// </summary>
+[Task] public static void Read()
+{
+    string text;
+    while ((text = Console.ReadLine()) != null)
+        New(text); 
+}
+
+/// <summary> 
+/// Posts new message to twitter using given text
 /// </summary>
 [Task] public static void New(string text = null)
 {

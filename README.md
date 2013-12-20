@@ -27,6 +27,7 @@ C:\> tweet -T
 tweet login   # Logs into twitter
 tweet logout  # Logs out of twitter
 tweet new     # Posts new tweet using given text
+tweet read    # Posts new message to twitter but reads it from stdin
 tweet show    # Displays last N tweets from you timeline
 tweet whoami  # Shows current twitter account name
 ```
@@ -54,6 +55,25 @@ The ``tweet new`` command allows you to post tweets into your twitter account. Y
 
 ```bash
 tweet new [text]
+```
+
+### tweet read
+
+The ``tweet read`` command posts message to twitter but reads it from ``stdin``, enabling use with scripting.
+
+```bash
+echo "your tweet message" | tweet read
+```
+or
+
+```bash
+cat tweet.txt | tweet read
+```
+
+or
+
+```bash
+tweet read < tweet.txt
 ```
 
 ### tweet show
